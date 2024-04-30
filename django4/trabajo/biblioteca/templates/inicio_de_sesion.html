@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <title>Iniciar Sesión</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .contenedor {
+            text-align: center; /* Centrar el contenido */
+            max-width: 400px; /* Limitar el ancho del contenedor */
+            width: 100%;
+        }
+
+        form {
+            margin-top: 20px; /* Espacio entre el título y el formulario */
+        }
+
+        form label, form input {
+            display: block;
+            margin: 0 auto;
+            width: 80%; 
+            margin-bottom: 10px; 
+        }
+
+        button[type="submit"] {
+            width: 80%; 
+        }
+
+        .volver {
+            margin-top: 40px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Iniciar sesión</h1>
+        {% if messages %}
+            <ul class="mensajes">
+                {% for mensaje in messages %}
+                    <li>{{ mensaje }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form method="POST" action="{% url 'iniciar_sesion' %}">
+            {% csrf_token %}
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="password" name="contraseña" required>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <div class="olvidé-contraseña">
+            <a href="{% url 'olvide_contraseña' %}">¿Olvidaste tu contraseña?</a>
+        </div>
+        <div class="volver">
+            <a href="{% url 'index' %}">Volver a la página principal</a>
+        </div>
+    </div>
+</body>
+</html>

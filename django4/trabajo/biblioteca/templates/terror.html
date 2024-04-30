@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>NightGames - Terror</title>
+</head>
+<body class="category-page">
+    <header>
+        <h1>NightGames - Terror</h1>
+    </header>
+    
+    <nav>
+        <a href="{% url 'index' %}">Volver a la Página Principal</a>
+    </nav>
+
+    <section class="juego-info">
+        <img src="{% static 'Nueva carpeta/resident-evil-2-remake-20191141048287_1.jpg' %}" alt="Imagen del juego de terror">
+        <h2>Resident Evil 4</h2>
+        <p>Es un juego de terror y supervivencia en el que los jugadores deben sobrevivir a situaciones de miedo extremo.</p>
+        <p>Precio: $50 dlr</p>
+            <button>Comprar</button>
+        </a>
+    </section>
+
+    <section class="juego-info">
+        <img src="{% static 'Nueva carpeta/until-dawn-20158117533_1.jpg' %}" alt="Imagen del juego de terror">
+        <h2>Until Dawn</h2>
+        <p>Until Dawn es un videojuego narrativo de los géneros survival horror y drama interactivo. Cuando ocho amigos quedan atrapados en una estancia de montaña remota, las cosas rápidamente se vuelven siniestras y empiezan a sospechar que no están solos.</p>
+        <p>Precio: $60 dlr</p>
+      
+            <button>Comprar</button>
+        </a>
+    </section>
+
+    <footer>
+        <!-- Aquí puedes agregar pie de página si lo necesitas -->
+    </footer>
+</body>
+</html>
+

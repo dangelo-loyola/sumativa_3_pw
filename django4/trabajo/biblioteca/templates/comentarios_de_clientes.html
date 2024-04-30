@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <nav>
+        <a href="{% url 'index' %}">Volver a la Página Principal</a>
+    </nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <title>NightGames - comentarios</title>
+    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios de Compradores - Tu Empresa de Videojuegos de PS4</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Comentarios de Compradores</h1>
+    </header>
+
+    <div class="container">
+        <h2>¡Lo que Nuestros Clientes Dicen!</h2>
+
+        <div class="comment">
+            <h3>Juan Pérez</h3>
+            <p>"Estoy encantado con mi compra en esta tienda. El proceso de compra fue fácil y rápido, y el producto llegó en perfectas condiciones. Definitivamente volveré a comprar aquí."</p>
+        </div>
+
+        <div class="comment">
+            <h3>María Gómez</h3>
+            <p>"Excelente atención al cliente. Tuve un problema con mi pedido y el equipo de soporte fue muy rápido en resolverlo. ¡Muy satisfecha con mi experiencia de compra!"</p>
+        </div>
+
+        <div class="comment">
+            <h3>Luis Rodríguez</h3>
+            <p>"Los precios son competitivos y la selección de juegos es increíble. Siempre encuentro lo que estoy buscando en esta tienda. Recomiendo completamente."</p>
+        </div>
+
+        <div class="comment">
+            <h3>Ana Martínez</h3>
+            <p>"He comprado varias veces en esta tienda y nunca me ha decepcionado. La calidad del servicio y la atención al cliente es excepcional. ¡Gracias por todo!"</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>NightGames - Página Principal</title>
+    <style>
+        .main-page {
+            text-align: center;
+        }
+        .main-content {
+            display: inline-block; 
+            text-align: left; 
+        }
+        .main-content button {
+            margin: 50px auto; 
+            display: block;
+        }
+    </style>
+</head>
+<body class="main-page">
+    <header>
+        NightGames
+        <br>
+        <span style="font-size: 0.6em; font-weight: normal; color: #FFD700;">Categorías</span>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="{% url 'terror' %}">Terror</a></li>
+            <li><a href="{% url 'accion' %}">Acción</a></li>
+            <li><a href="{% url 'aventura' %}">Aventura</a></li>
+            <li><a href="{% url 'rol' %}">Rol</a></li>
+            <li><a href="{% url 'estrategia' %}">Estrategia</a></li>
+        </ul>
+    </nav>
+
+    <div class="top-right">
+        <a href="{% url 'inicio_de_sesion' %}">Iniciar Sesión</a>
+        <a href="{% url 'registro_usuario' %}">Registro</a>
+    </div>
+
+    <footer>
+        <div class="bottom-links">
+            <a href="{% url 'quienes_somos' %}">Quiénes Somos,</a>
+            <a href="{% url 'contacto' %}">contacto,</a>
+            <a href="{% url 'comentarios_de_clientes' %}">cometarios de clientes</a>
+        </div>
+    </footer>
+
+    <main class="main-content">
+        <button onclick="window.location.href = '/accion/';">¡Comienza la Aventura con la categoría más popular!</button>
+        <p>Bienvenido a NightGames, tu destino para los mejores videojuegos.</p>
+        <p>Explora emocionantes categorías y descubre experiencias únicas.</p>
+    </main>
+
+    <footer>
+        ¡Juega, disfruta y sumérgete en el mundo de NightGames!
+    </footer>
+</body>
+</html>

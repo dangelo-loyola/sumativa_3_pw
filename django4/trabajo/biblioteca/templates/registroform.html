@@ -1,0 +1,25 @@
+from django.shortcuts import render, redirect
+from .forms import RegistroForm  # Asegúrate de importar tu formulario aquí
+from .models import Usuario  # Asegúrate de importar tu modelo de Usuario aquí
+
+def registro_usuario(request):
+    if request.method == 'POST':
+        form = RegistroForm(request.POST)
+        if form.is_valid():
+            # Guardar los datos del formulario en la base de datos
+            nombre_completo = form.cleaned_data['nombreCompleto']
+            nombre_usuario = form.cleaned_data['nombreUsuario']
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            fecha_nacimiento = form.cleaned_data['fechaNacimiento']
+            direccion = form.cleaned_data['direccion']
+            
+            # Aquí puedes crear un objeto Usuario con los datos del formulario y guardarlo en la base de datos
+            usuario = Usuario.objects.create(nombre_completo=nombre_completo, nombre_usuario=nombre_usuario, email=email, fecha_nacimiento=fecha_nacimiento, direccion=direccion)
+            
+            # Redirigir a alguna página de éxito o cualquier otra página
+            return redirect('pagina_exitosa')
+    else:
+        form = RegistroForm()
+    
+    return render(request, 'registro_usuario.html', {'form': form})

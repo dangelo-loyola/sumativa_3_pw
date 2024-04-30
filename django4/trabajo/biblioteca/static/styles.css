@@ -1,0 +1,65 @@
+/* Estilos para el cuerpo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFD700; /* Color de texto general */
+    background-image: url('/static/Nueva carpeta/videojuegos_1920x1080.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Escala la imagen para que cubra todo el fondo */
+    background-position: center; /* Posiciona la imagen en el centro */
+}
+
+/* Estilos para los botones */
+button {
+    padding: 10px 20px;
+    background-color: #FFA500; /* Color de fondo para botones */
+    color: #2ecc71; /* Color de texto para botones */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición de color de fondo al pasar el ratón */
+}
+
+/* Cambio de color al pasar el ratón sobre botones */
+button:hover {
+    background-color: #FFA500;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 400px;
+    width: 90%; /* Ancho máximo del contenedor */
+    margin: 50px auto; /* Centrar vertical y horizontalmente */
+    padding: 20px;
+    border: 1px solid #2ecc71;
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluye el padding en el ancho del contenedor */
+}
+
+/* Estilos para etiquetas y campos de entrada */
+label,
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #FFD700; /* Color de texto para enlaces */
+    text-decoration: none; /* Quitar subrayado de enlaces */
+    transition: color 0.3s; /* Transición de color al pasar el ratón */
+}
+
+/* Cambio de color al pasar el ratón sobre enlaces */
+a:hover {
+    color: #FFA500; /* Color de texto para enlaces al pasar el ratón */
+}
+
+/* Media query para dispositivos con un ancho máximo de 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Reducir el ancho del contenedor */
+    }
+}
+

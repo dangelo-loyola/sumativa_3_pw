@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>NightGames - Aventura</title>
+</head>
+<body class="category-page">
+    <header>
+        <h1>NightGames - Aventura</h1>
+    </header>
+    
+    <nav>
+        <a href="{% url 'index' %}">Volver a la Página Principal</a>
+    </nav>
+
+    <div class="contenedor"> <!-- Aquí comienza el contenedor principal -->
+        <section class="juego-info">
+            <img src="{% static 'Nueva carpeta/1642463878-ice-age-una-aventura-de-bellotas-ps4.jpg' %}" alt="Imagen del juego de aventura">
+            <h2>ice age una aventura de bellotas</h2>
+            <p>¡La ardilla dientes de sable favorita de la Edad de Hielo, Scrat, se ha metido otra vez en una aventura completamente nueva! Un misterioso mecanismo en un antiguo templo Scratazon ha tiene bloqueado su preciado tesoro, y la única manera de recuperarlo es una épica búsqueda para encontrar las cuatro legendarias Bellotas de Cristal, dispersas por todo el territorio..</p>
+            <p>Precio: $45 dlr</p>
+            <button>Comprar</button> <!-- Botón dentro del contenedor -->
+        </section>
+
+        <section class="juego-info">
+            <img src="{% static 'Nueva carpeta/horizon-zero-dawn.webp' %}" alt="Imagen del juego de aventura">
+            <h2>Horizon</h2>
+            <p>¡Una joven heroína en un mundo dominado por robots
+                Esta joven abandona la placidez de su refugio para adentrarse en un mundo abierto y hostil, poblado por diferentes tribus de supervivientes con las que tendrá que relacionarse y cumplir misiones.</p>
+            <p>Precio: $62 dlr</p>
+            <button>Comprar</button> <!-- Botón dentro del contenedor -->
+        </section>
+    </div> <!-- Aquí termina el contenedor principal -->
+</body>
+</html>

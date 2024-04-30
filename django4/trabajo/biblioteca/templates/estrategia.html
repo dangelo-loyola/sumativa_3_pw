@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>NightGames - Estrategia</title>
+</head>
+<body class="category-page">
+    <header>
+        <h1>NightGames - Estrategia</h1>
+    </header>
+    
+    <nav>
+        <a href="{% url 'index' %}">Volver a la Página Principal</a>
+    </nav>
+
+    <section class="juego-info">
+        <img src="{% static 'Nueva carpeta/civilization_vi-5003764.webp' %}" alt="Imagen del juego de estrategia">
+        <h2>civilizacion vi</h2>
+        <p>Sid Meier's Civilization VI o Civilization VI es un videojuego de estrategia por turnos perteneciente a la serie Civilization..</p>
+        <p>Precio: $30 dlr</p>
+
+
+    <footer>
+        <button>Comprar</button>
+        <section class="juego-info">
+            <img src="{% static 'Nueva carpeta/xcom_2-3411464.webp' %}" alt="Imagen del juego de estrategia">
+            <h2>X com 2</h2>
+            <p>XCOM 2 es la secuela de XCOM: Enemy Unknown, el galardonado juego de estrategia. Han pasado veinte años desde que la humanidad perdió la guerra contra los invasores alienígenas y hay un nuevo orden en la Tierra. Tras años escondidos en la sombra, las fuerzas XCOM deben alzarse y eliminar la ocupación alienígena.
+            </p>
+            <p>Precio: $59 dlr</p>
+    
+    
+        <footer>
+            <button>Comprar</button>
+    </footer>
+</body>
+</html>

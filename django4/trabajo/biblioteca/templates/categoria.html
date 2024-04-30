@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>NightGames - Categoría</title>
+</head>
+
+    <header>
+        <h1>NightGames</h1>
+    </header>
+    
+    <nav>
+        <a href="{% url 'index' %}">Volver a la Página Principal</a>
+    </nav>
+
+    <section class="juego-info">
+        <img src="{% static '1642463878-ice-age-una-aventura-de-bellotas-ps4.jpg' %}" alt="Imagen del juego">
+        <h2>ice age una aventura de bellotas</h2>
+        <p>juego de aventura.</p>
+        <p>Precio: $40 dlr$</p>
+    </section>
+    </section>
+
+</body>
+</html>
